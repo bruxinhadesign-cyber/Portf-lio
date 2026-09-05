@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Angela - Design & Tecnologia</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <div class="brand-logo">
+        <!-- Logo atualizada com clique para ampliar e ponteiro de clique -->
+        <img src="img/logo.jpeg" alt="Logo Bruxinha Design" style="cursor: pointer;" onclick="openModal(this)" onerror="this.onerror=null; this.src='img/logo.jpg';">
+        <div class="brand-logo-text">
+          DESIGN
+          <span>& TECNOLOGIA</span>
+        </div>
+      </div>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a class="nav-link active" onclick="openTab('sobre')">Sobre Mim</a></li>
+          <li><a class="nav-link" onclick="openTab('projetos')">Projetos</a></li>
+          <li><a class="nav-link" onclick="openTab('contatos')">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- TAB: SOBRE MIM -->
+    <section id="sobre" class="tab-content active">
+      <h1 class="section-title">Sobre Mim</h1>
+      <div class="about-container">
+        <!-- Foto de perfil também com opção de clique para ampliar -->
+        <img src="img/foto-perfil.jpeg" alt="Foto de Angela" class="about-profile-pic" style="cursor: pointer;" onclick="openModal(this.currentSrc || this.src)" onerror="this.onerror=null; this.src='img/foto-perfil.jpg';">
+        <div class="about-text">
+          <h2>Olá, eu sou Angela!</h2>
+          <p>Sou uma designer em início de carreira movida pela paixão de transformar ideias em realidade visual.</p>
+          <p>Embora tenha poucos projetos no meu portfólio e esteja buscando minha primeira experiência profissional, trago comigo criatividade de sobra e muita vontade de aprender.</p>
+          <p>Domino o básico de ferramentas essenciais como Figma, Photoshop, Illustrator e Miro. Sou prestativa, gentil e muito esforçada. O meu maior diferencial é a persistência: quando me empolgo com um projeto, não desisto até ver o melhor resultado na tela.</p>
+          <p>Estou pronta para crescer, evoluir e colaborar com novas ideias!</p>
+
+          <div class="skills-container">
+            <h3 class="skills-title">Skills</h3>
+            <div class="skills-grid">
+              <span class="skill-tag"><i class="fa-solid fa-palette"></i> Photoshop</span>
+              <span class="skill-tag"><i class="fa-solid fa-vector-square"></i> Illustrator</span>
+              <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> Miro</span>
+              <span class="skill-tag"><i class="fa-solid fa-pen-nib"></i> Figma</span>
+              <span class="skill-tag"><i class="fa-solid fa-paint-brush"></i> Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: PROJETOS -->
+    <section id="projetos" class="tab-content">
+      <h1 class="section-title">Meus Projetos de Design</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Explore abaixo alguns dos meus trabalhos recentes de design e arte visual.</p>
+      
+      <div class="projects-grid">
+        <!-- Projeto 1 -->
+        <div class="project-card">
+          <img src="img/banner-naruto.jpeg" alt="Banner do Naruto" class="project-img" onerror="this.onerror=null; this.src='img/banner-naruto.jpg';">
+          <div class="project-body">
+            <h3 class="project-title">Banner do Naruto</h3>
+            <div class="project-tools">Ferramentas: Illustrator</div>
+            <p class="project-desc">Design de banner temático focado na composição de personagens, efeitos visuais e tipografia marcante.</p>
+            <button class="btn-view" onclick="openCardModal(this)">Ver Imagem Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-card">
+          <img src="img/projeto-praca.jpeg" alt="Projeto Praça" class="project-img" onerror="this.onerror=null; this.src='img/projeto-praca.jpg';">
+          <div class="project-body">
+            <h3 class="project-title">Projeto Praça</h3>
+            <div class="project-tools">Ferramentas: Photoshop</div>
+            <p class="project-desc">Estudo de composição espacial e design gráfico voltado para ambientes urbanos e arquitetura visual.</p>
+            <button class="btn-view" onclick="openCardModal(this)">Ver Imagem Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="project-card">
+          <img src="img/anuncio-promocao.jpeg" alt="Anúncio de Promoção" class="project-img" onerror="this.onerror=null; this.src='img/anuncio-promocao.jpg';">
+          <div class="project-body">
+            <h3 class="project-title">Anúncio de Promoção</h3>
+            <div class="project-tools">Ferramentas: Photoshop</div>
+            <p class="project-desc">Peça publicitária/social media criada para campanhas promocionais, com foco em hierarquia visual e chamada para ação (CTA).</p>
+            <button class="btn-view" onclick="openCardModal(this)">Ver Imagem Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="project-card">
+          <img src="img/projeto-toad.jpeg" alt="Projeto Toad" class="project-img" onerror="this.onerror=null; this.src='img/projeto-toad.jpg';">
+          <div class="project-body">
+            <h3 class="project-title">Projeto Toad</h3>
+            <div class="project-tools">Ferramentas: Figma</div>
+            <p class="project-desc">Criação de arte conceitual e design gráfico focado em composição visual e paleta de cores.</p>
+            <button class="btn-view" onclick="openCardModal(this)">Ver Imagem Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Projeto 5 (Vila Medieval) -->
+        <div class="project-card">
+          <img src="img/vila-medieval.jpg" alt="Vila Medieval" class="project-img" onerror="this.onerror=null; this.src='img/vila-medieval.jpeg';">
+          <div class="project-body">
+            <h3 class="project-title">Vila Medieval</h3>
+            <div class="project-tools">Ferramentas: Photoshop</div>
+            <p class="project-desc">Composição visual e manipulação de imagem desenvolvidas no Adobe Photoshop. O projeto explora técnicas de fusão, ajuste de luz e sombra e color grading para construir a atmosfera imersiva de uma vila medieval.</p>
+            <button class="btn-view" onclick="openCardModal(this)">Ver Imagem Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: CONTATOS -->
+    <section id="contatos" class="tab-content">
+      <h1 class="section-title" style="display: block; text-align: center;">Vamos Conversar?</h1>
+      <div class="contact-card">
+        <p>Se você tem um projeto em mente, uma proposta de trabalho ou quer apenas trocar ideias sobre o mercado, fique à vontade para me mandar uma mensagem. Respondo o mais rápido possível!</p>
+        
+        <div class="contact-links">
+          <a href="mailto:bruxinhadesign@gmail.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>bruxinhadesign@gmail.com</span>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/ângela-silva-3b7052350" target="_blank" class="contact-item">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn: Ângela Silva</span>
+          </a>
+          
+          <a href="https://www.instagram.com/bruxinha_design" target="_blank" class="contact-item">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram: @bruxinha_design</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL ZOOM -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImg" class="modal-content" src="" alt="Zoom Visual">
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Ângela Silva — Design & Tecnologia. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JavaScript Externo -->
+  <script src="script.js"></script>
+</body>
+</html>
